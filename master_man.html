@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Man</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d1117;
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      padding: 15px;
+      background: #161b22;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+    .tabs {
+      display: flex;
+      overflow-x: auto;
+      background: #21262d;
+    }
+    .tabs button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      background: #21262d;
+      color: #fff;
+      cursor: pointer;
+    }
+    .tabs button.active {
+      background: #238636;
+    }
+    iframe {
+      width: 100%;
+      height: 80vh;
+      border: none;
+    }
+    .footer {
+      margin: 10px 0;
+      font-size: 12px;
+    }
+    .info-btn {
+      margin: 10px;
+      padding: 10px 20px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Master Man</h1>
+  <p>A collection of stages — play inside the app</p>
+</header>
+
+<div class="tabs">
+  <button class="tablink active" onclick="openStage(0)">Stage 1</button>
+  <button class="tablink" onclick="openStage(1)">Stage 2</button>
+  <button class="tablink" onclick="openStage(2)">Stage 3</button>
+  <button class="tablink" onclick="openStage(3)">Stage 4</button>
+  <button class="tablink" onclick="openStage(4)">Stage 5</button>
+  <button class="tablink" onclick="openStage(5)">Stage 6</button>
+  <button class="tablink" onclick="openStage(6)">Stage 7</button>
+  <button class="tablink" onclick="openStage(7)">Stage 8</button>
+  <button class="tablink" onclick="openStage(8)">Stage 9</button>
+  <button class="tablink" onclick="openStage(9)">Stage 10</button>
+</div>
+
+<iframe id="gameFrame" src="http://www.appcreator24.com/intra/app_sec_game_preview.php?idioma=en&idsesion=u43p217cf5esx90bmhygdnjwv6tkrozqal8i&idg=24&ckp=hslgmwx94ybaqp7nutvdzj3i5ko1cf62e0r8@2229519@0"></iframe>
+
+<button class="info-btn" onclick="alert('The Master Man videogame was released in September 26 2025')">Release Info</button>
+
+<div class="footer">
+  © Master Man
+</div>
+
+<script>
+  const urls = [
+    "http://www.appcreator24.com/intra/app_sec_game_preview.php?idioma=en&idsesion=u43p217cf5esx90bmhygdnjwv6tkrozqal8i&idg=24&ckp=hslgmwx94ybaqp7nutvdzj3i5ko1cf62e0r8@2229519@0",
+    "http://www.appcreator24.com/intra/app_sec_game_preview.php?idioma=en&idsesion=u43p217cf5esx90bmhygdnjwv6tkrozqal8i&idg=11&ckp=hslgmwx94ybaqp7nutvdzj3i5ko1cf62e0r8@2229519@0",
+    "http://www.appcreator24.com/intra/app_sec_game_preview.php?idioma=en&idsesion=u43p217cf5esx90bmhygdnjwv6tkrozqal8i&idg=1&ckp=hslgmwx94ybaqp7nutvdzj3i5ko1cf62e0r8@2229519@0",
+    "http://www.appcreator24.com/intra/app_sec_game_preview.php?idioma=en&idsesion=u43p217cf5esx90bmhygdnjwv6tkrozqal8i&idg=30&ckp=hslgmwx94ybaqp7nutvdzj3i5ko1cf62e0r8@2229519@0",
+    "http://www.appcreator24.com/intra/app_sec_game_preview.php?idioma=en&idsesion=u43p217cf5esx90bmhygdnjwv6tkrozqal8i&idg=118&ckp=hslgmwx94ybaqp7nutvdzj3i5ko1cf62e0r8@2229519@0",
+    "http://www.appcreator24.com/intra/app_sec_game_preview.php?idioma=en&idsesion=u43p217cf5esx90bmhygdnjwv6tkrozqal8i&idg=101&ckp=hslgmwx94ybaqp7nutvdzj3i5ko1cf62e0r8@2229519@0",
+    "http://www.appcreator24.com/intra/app_sec_game_preview.php?idioma=en&idsesion=u43p217cf5esx90bmhygdnjwv6tkrozqal8i&idg=68&ckp=hslgmwx94ybaqp7nutvdzj3i5ko1cf62e0r8@2229519@0",
+    "http://www.appcreator24.com/intra/app_sec_game_preview.php?idioma=en&idsesion=u43p217cf5esx90bmhygdnjwv6tkrozqal8i&idg=38&ckp=hslgmwx94ybaqp7nutvdzj3i5ko1cf62e0r8@2229519@0",
+    "http://www.appcreator24.com/intra/app_sec_game_preview.php?idioma=en&idsesion=u43p217cf5esx90bmhygdnjwv6tkrozqal8i&idg=15&ckp=hslgmwx94ybaqp7nutvdzj3i5ko1cf62e0r8@2229519@0",
+    "http://www.appcreator24.com/intra/app_sec_game_preview.php?idioma=en&idsesion=u43p217cf5esx90bmhygdnjwv6tkrozqal8i&idg=11&ckp=hslgmwx94ybaqp7nutvdzj3i5ko1cf62e0r8@2229519@0"
+  ];
+
+  function openStage(index) {
+    document.getElementById('gameFrame').src = urls[index];
+    let buttons = document.querySelectorAll('.tablink');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    buttons[index].classList.add('active');
+  }
+</script>
+
+</body>
+</html>
